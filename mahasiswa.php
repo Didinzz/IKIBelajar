@@ -35,7 +35,7 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>Daftar Mahasiswa coba</h1>
+        <h1>Daftar Mahasiswa</h1>
       </div>
     </div>
 
