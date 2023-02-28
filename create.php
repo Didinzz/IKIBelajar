@@ -48,14 +48,25 @@
             <div class="row">
                 <div class="col">
                     <form action="store.php" method="post">
+
+                    <!-- input nama -->
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="nama" name ="nama" placeholder="Nama ">
                         </div>
+
+                        <!-- input NIM -->
                         <div class="mb-3">
                             <label for="nim" class="form-label">NIM</label>
                             <input type="text" class="form-control" id="nim" name = "nim" placeholder="Nim">
                         </div>
+
+                        <!-- input kehadiran -->
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Kehadiran</label>
+                            <input type="text" class="form-control" id="nama" name ="absen" placeholder="absen ">
+                        </div>
+
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>

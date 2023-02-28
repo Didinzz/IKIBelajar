@@ -52,6 +52,7 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
                             <th scope="col">No.</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Nim</th>
+                            <th scope="col">Absen</th>
                             <th scope="col">Handle</th>
                         </tr>
                     </thead>
@@ -63,6 +64,7 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
                                 <th scope="row"><?php echo $no ?></th>
                                 <td> <?php echo $mahasiswa['nama_mahasiswa'] ?></td>
                                 <td><?php echo $mahasiswa['NIM_mahasiswa'] ?></td>
+                                <td><?php echo $mahasiswa['absen']?> </td>
                                 <td>
                                     <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Detail</button>
                                     <button class="btn btn-sm btn-warning">Edit</button>
