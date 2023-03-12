@@ -17,20 +17,7 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="#">SesukaHatiKalian</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="index.php">Home</a>
-                    <a class="nav-link" href="mahasiswa.php">Mahasiswa</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php include '../partial/nav.php' ?>
 
     <div class="container">
         <div class="row">
@@ -41,7 +28,7 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
 
         <div class="row">
             <div class="col">
-                <a href="create.php" class="btn btn-primary">Tambah data mahasiswa</a>
+                <a href="/mahasiswa/create.php" class="btn btn-primary">Tambah data mahasiswa</a>
             </div>
         </div>
         <div class="row">
@@ -64,11 +51,11 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
                                 <th scope="row"><?php echo $no ?></th>
                                 <td> <?php echo $mahasiswa['nama_mahasiswa'] ?></td>
                                 <td><?php echo $mahasiswa['NIM_mahasiswa'] ?></td>
-                                <td><?php echo $mahasiswa['absen']?> </td>
+                                <td><?php echo $mahasiswa['Absen'] ?> </td>
                                 <td>
-                                    <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Detail</button>
+                                    <a href="/mahasiswa/show.php?id=<?= $mahasiswa['id'] ?>" class="btn btn-sm btn-info">Detail</a href="s">
                                     <button class="btn btn-sm btn-warning">Edit</button>
-                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                    <a href="/mahasiswa/delete.php?id=<?= $mahasiswa['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
                                 </td>
                             </tr>
                         <?php
