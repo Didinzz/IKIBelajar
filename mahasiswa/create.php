@@ -23,7 +23,7 @@
     </head>
 
     <body>
-       <?php include '../partial/nav.php' ?>
+        <?php include '../partial/nav.php' ?>
 
         <div class="container">
             <div class="row">
@@ -36,22 +36,22 @@
                 <div class="col">
                     <form action="store.php" method="post">
 
-                    <!-- input nama -->
+                        <!-- input nama -->
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="nama" name ="nama" placeholder="Nama ">
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama ">
                         </div>
 
                         <!-- input NIM -->
                         <div class="mb-3">
                             <label for="nim" class="form-label">NIM</label>
-                            <input type="text" class="form-control" id="nim" name = "nim" placeholder="Nim">
+                            <input type="text" class="form-control" id="nim" name="nim" placeholder="Nim">
                         </div>
 
                         <!-- input kehadiran -->
                         <div class="mb-3">
-                            <label for="nama" class="form-label">Kehadiran</label>
-                            <input type="text" class="form-control" id="nama" name ="absen" placeholder="absen ">
+                            <label for="absen" class="form-label">Kehadiran</label>
+                            <input type="text" class="form-control" id="absen" name="absen" placeholder="absen ">
                         </div>
 
                         <div class="mb-3 form-check">

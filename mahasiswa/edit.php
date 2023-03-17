@@ -1,3 +1,15 @@
+<?php
+
+require_once 'koneksi.php';
+
+$id = $_GET['id'];
+
+$edit = mysqli_query($koneksi, "SELECT * FROM mahasiswa WHERE id = $id");
+
+$update = mysqli_fetch_assoc($edit);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,24 +46,25 @@
 
             <div class="row">
                 <div class="col">
-                    <form action="store.php" method="post">
+                    <form action="update.php" method="post">
 
                     <!-- input nama -->
+                    <input type="hidden" name="id" value="<?=$update ['id']?>">
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="nama" name ="nama" placeholder="Nama ">
+                            <input type="text" class="form-control" id="nama" name ="nama" placeholder="Nama " value="<?= $update["nama_mahasiswa"]?>">
                         </div>
 
                         <!-- input NIM -->
                         <div class="mb-3">
                             <label for="nim" class="form-label">NIM</label>
-                            <input type="text" class="form-control" id="nim" name = "nim" placeholder="Nim">
+                            <input type="text" class="form-control" id="nim" name = "nim" placeholder="Nim" value="<?= $update['NIM_mahasiswa']?>">
                         </div>
 
                         <!-- input kehadiran -->
                         <div class="mb-3">
                             <label for="nama" class="form-label">Kehadiran</label>
-                            <input type="text" class="form-control" id="nama" name ="absen" placeholder="absen ">
+                            <input type="text" class="form-control" id="nama" name ="absen" placeholder="absen " value="<?= $update['Absen']?>">
                         </div>
 
                         <div class="mb-3 form-check">

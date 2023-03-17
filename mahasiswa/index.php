@@ -54,7 +54,7 @@ $data = mysqli_query($koneksi, 'SELECT * FROM mahasiswa');
                                 <td><?php echo $mahasiswa['Absen'] ?> </td>
                                 <td>
                                     <a href="/mahasiswa/show.php?id=<?= $mahasiswa['id'] ?>" class="btn btn-sm btn-info">Detail</a href="s">
-                                    <button class="btn btn-sm btn-warning">Edit</button>
+                                    <a href="/mahasiswa/edit.php?id=<?= $mahasiswa ['id']?>" class="btn btn-sm btn-warning">Edit</a >
                                     <a href="/mahasiswa/delete.php?id=<?= $mahasiswa['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
                                 </td>
                             </tr>
